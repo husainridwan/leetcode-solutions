@@ -15,11 +15,10 @@ class Solution(object):
                     total += maxL - height[l]
                 l += 1
             else:
-                if height[r] <= height[l]:
-                    if height[r] >= maxR:
-                        maxR = height[r]
-                    else:
-                        total += maxR - height[r]
+                if height[r] >= maxR:
+                    maxR = height[r]
+                else:
+                    total += maxR - height[r]
                 r -= 1
         return total
         
