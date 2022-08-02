@@ -11,13 +11,10 @@ class Solution:
     
         l = 0
         r = len(numbers) - 1
-        while l < r:
-            total = numbers[l] + numbers[r]
-            if target == (numbers[l] + numbers[r]):
-                return [l+1, r+1]
-            elif (numbers[l] + numbers[r]) > target:
+        while (numbers[l] + numbers[r]) != target:
+            if (numbers[l] + numbers[r]) > target:
                 r -= 1
             else:
                 l += 1
-        return []
+        return [l+1, r+1]
         
