@@ -9,8 +9,7 @@ class Solution:
                 checkSum[x] = i
         return []"""
     
-        l = 0
-        r = len(numbers) - 1
+        l, r = 0, len(numbers) - 1
         while (numbers[l] + numbers[r]) != target:
             if (numbers[l] + numbers[r]) > target:
                 r -= 1
