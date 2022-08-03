@@ -1,6 +1,6 @@
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
-        """first = self.binarySearch(nums, target, True)
+        first = self.binarySearch(nums, target, True)
         last = self.binarySearch(nums, target, False)
         return [first, last]
         
@@ -19,8 +19,8 @@ class Solution:
                     r = m - 1
                 else:
                     l = m + 1
-        return i"""
-        l = 0
+        return i
+        """l = 0
         r = len(nums)-1
         res = [-1,-1]
         while l<=r:
@@ -46,5 +46,5 @@ class Solution:
             elif nums[mid] < target:
                 l = mid +1
                 
-        return res
+        return res"""
         
