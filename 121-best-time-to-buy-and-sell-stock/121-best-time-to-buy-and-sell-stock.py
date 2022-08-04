@@ -6,7 +6,7 @@ class Solution:
         #Condition to ensure r does not exceed length of array
         while r < len(prices):
             #Check if profitable
-            if prices[r] > prices[l]:
+            if prices[l] < prices[r]:
                 profit = prices[r] - prices[l]
                 maxProfit = max(maxProfit, profit)
             else:
