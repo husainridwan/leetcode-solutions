@@ -2,7 +2,8 @@ class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
         count = {}
         result = 0
-        l, maxF = 0, 0
+        l = 0
+        maxF = 0
         
         for r in range(len(s)):
             count[s[r]] = 1 + count.get(s[r], 0)
