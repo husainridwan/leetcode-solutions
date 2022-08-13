@@ -5,8 +5,8 @@ class Solution:
         for i in nums:
             if i == 1:
                 count += 1
-                maximum = max(maximum, count)
+                maximum = max(count, maximum)
             else:
-                maximum = max(maximum, count)
+                maximum = max(count, maximum)
                 count = 0
-        return max(maximum, count)
+        return max(count, maximum)
