@@ -7,5 +7,6 @@ class Solution:
                 count += 1
                 maximum = max(maximum, count)
             else:
+                maximum = max(maximum, count)
                 count = 0
-        return maximum
+        return max(maximum, count)
