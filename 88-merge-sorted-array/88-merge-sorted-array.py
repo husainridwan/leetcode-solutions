@@ -3,22 +3,15 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        last = m + n - 1
-        #Check for the largest number and start filling the array from behind
-        while m > 0 and n > 0:
-            if nums1[m - 1] > nums2[n - 1]:
-                nums1[last] = nums1[m - 1]
-                m -= 1
+        
+        a, b, write_index = m-1, n-1, m + n - 1
+
+        while b >= 0:
+            if a >= 0 and nums1[a] > nums2[b]:
+                nums1[write_index] = nums1[a]
+                a -= 1
             else:
-                nums1[last] = nums2[n - 1]
-                n -= 1
-            last -= 1
-        
-        #Fill nums1 with the remainder of nums2
-        while n > 0:
-            nums1[last] = nums2[n - 1]
-            n -= 1
-            last -= 1
-            
-        
-        
+                nums1[write_index] = nums2[b]
+                b -= 1
+
+            write_index -= 1
