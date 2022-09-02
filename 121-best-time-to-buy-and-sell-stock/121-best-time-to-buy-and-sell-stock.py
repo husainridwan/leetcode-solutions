@@ -13,5 +13,3 @@ class Solution:
                 l = r
             r += 1
         return maxProfit
-                
-        
