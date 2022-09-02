@@ -2,6 +2,7 @@ class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:   
         nums1.sort()
         nums2.sort()
+        
         l = r = 0
         res = []
         
@@ -15,3 +16,4 @@ class Solution:
                 l += 1
                 r += 1
         return res
+     
