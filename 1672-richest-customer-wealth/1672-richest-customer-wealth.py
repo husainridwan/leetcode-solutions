@@ -4,5 +4,5 @@ class Solution:
         for account in accounts:
             curSum = sum(account)
             if maxSum < curSum:
-                maxSum = max(maxSum, curSum)
+                maxSum = curSum
         return maxSum
