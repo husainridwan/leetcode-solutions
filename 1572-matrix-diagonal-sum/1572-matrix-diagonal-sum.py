@@ -10,13 +10,13 @@ class Solution:
         #            total += mat[i][j]
         #return total
 
-        n = cols-1
+        #n = cols-1
         
         for i in range(rows):
 		    # Add primary diagonal.
             total += mat[i][i]
 			# Add the secondary but avoid the middle point that overlaps the primary.
-            if i != n-i:
-                total += mat[i][n-i]
+            if i != cols-1-i:
+                total += mat[i][cols-1-i]
             
         return total
