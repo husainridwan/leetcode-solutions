@@ -1,12 +1,12 @@
 class Solution:
     def repeatedCharacter(self, s: str) -> str:
-        times = 1
         check = {}
+        count = 1
         
         for char in s:
             if char not in check:
                 check[char] = 1
-            elif check[char] == times:
+            elif check[char] == count:
                 return char
             else:
                 check[char] += 1
