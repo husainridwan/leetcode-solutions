@@ -1,6 +1,5 @@
 class Solution:
     def countConsistentStrings(self, allowed: str, words: List[str]) -> int:
-        check = {}
         count = 0
         allow = set(allowed)
         
