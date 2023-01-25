@@ -1,16 +1,29 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
 
-class Solution:
-    def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
-        if not original:
-            return None
+class Solution {
+    public final TreeNode getTargetCopy(final TreeNode original, final TreeNode cloned, final TreeNode target) {
+        if (original == null) {
+            return null;
+        }
         
-        if original is target:
-            return cloned
+        if (original == target) {
+            return cloned;
+        }
         
-        return (self.getTargetCopy(original.left, cloned.left, target) or self.getTargetCopy(original.right, cloned.right, target))
+        TreeNode left = getTargetCopy(original.left, cloned.left, target);
+        if(left != null) {
+            return left;
+        }
+        else {
+            return getTargetCopy(original.right, cloned.right, target);
+        }
+    }
+}
