@@ -1,12 +1,10 @@
-class Solution:
-    def repeatedCharacter(self, s: str) -> str:
-        check = {}
-        count = 1
-        
-        for char in s:
-            if char not in check:
-                check[char] = 1
-            elif check[char] == count:
-                return char
-            else:
-                check[char] += 1
+class Solution {
+    public char repeatedCharacter(String s) {
+        HashSet<Character> set = new HashSet<>();
+        for(int i=0; i<s.length(); i++) {
+            if (set.contains(s.charAt(i))) return s.charAt(i);
+            set.add(s.charAt(i));
+        }return 'a';
+    }
+}
+
