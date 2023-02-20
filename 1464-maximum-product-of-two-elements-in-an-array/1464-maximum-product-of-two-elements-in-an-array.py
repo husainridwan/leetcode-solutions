@@ -4,5 +4,5 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        nums = sorted(nums)
+        nums.sort()
         return (nums[-1]-1) * (nums[-2]-1)
