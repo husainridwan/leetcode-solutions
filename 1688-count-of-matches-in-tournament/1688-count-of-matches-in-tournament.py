@@ -4,4 +4,4 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        return n - 1
+        return n-1
