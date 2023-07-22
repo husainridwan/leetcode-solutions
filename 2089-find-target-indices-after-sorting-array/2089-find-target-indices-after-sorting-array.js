@@ -4,12 +4,12 @@
  * @return {number[]}
  */
 var targetIndices = function(nums, target) {
-    let hash = [];
     nums.sort((a, b) => a - b);
-    
-    nums.forEach((num, idx) => {
-        if(num === target)
-            hash.push(idx);
-        });
+    let hash = [];
+    for(let i=0; i<nums.length; i++) {
+        if(nums[i] === target) {
+            hash.push(i);
+        }
+    }
     return hash;
 };
