@@ -4,12 +4,17 @@
  * @return {boolean}
  */
 var isAnagram = function(s, t) {
+    // .join('')
+    s = s.split('').sort();
+    t = t.split('').sort();
+    
     if(s.length !== t.length) {
         return false;
     }
-    
-    let str1 = s.split('').sort().join('');
-    let str2 = t.split('').sort().join('');
-    
-    return str1 === str2;
+    for(let i=0; i<s.length; i++) {
+        if(s[i] !== t[i]) {
+            return false;
+        }
+    }
+    return true;
 };
