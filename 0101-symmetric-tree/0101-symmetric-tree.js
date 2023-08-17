@@ -11,6 +11,10 @@
  * @return {boolean}
  */
 var isSymmetric = function(root) {    
+    if(!root) {
+        return true;
+    }
+    
     let isSame = function(leftRoot, rightRoot) {
         if (!leftRoot && !rightRoot) {
             return true;
@@ -23,8 +27,6 @@ var isSymmetric = function(root) {
         }
         return isSame(leftRoot.left, rightRoot.right) && isSame(leftRoot.right, rightRoot.left);
     }
-    if(!root) {
-        return true;
-    }
+
     return isSame(root.left, root.right);    
 };
