@@ -8,4 +8,5 @@ var singleNumber = function(nums) {
         s = s ^ nums[i];
     }
     return s;
+    
 };
