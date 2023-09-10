@@ -3,16 +3,21 @@
  * @return {number}
  */
 var climbStairs = function(n) {
-    if(n <= 2) {
-        return n;
+    let cache = {};
+    function climb(num) {
+        if (num in cache) {
+            return cache[num];
+        }    
+        let result = 0;
+        if(num <= 3) {
+            result = num;
+        } else {
+            result = climb(num-1) + climb(num-2);
+        }
+        
+        cache[num] = result;
+        return result;
     }
     
-    let steps = [];
-    steps[1] = 1;
-    steps[2] = 2;
-    
-    for(let i=3; i<=n; i++) {
-        steps[i] = steps[i-1] + steps[i-2];
-    }
-    return steps[n]
+    return climb(n);
 };
