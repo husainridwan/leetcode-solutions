@@ -11,7 +11,7 @@ var climbStairs = function(n) {
         let result = 0;
         if(num <= 3) {
             result = num;
-        } else if (n>3) {
+        } else {
             result = climb(num-1) + climb(num-2);
         }
         
