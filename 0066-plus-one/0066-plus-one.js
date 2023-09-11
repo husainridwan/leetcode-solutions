@@ -3,7 +3,7 @@
  * @return {number[]}
  */
 var plusOne = function(digits) {
-    let result = new Array(digits.length-1).fill(1);
+    let result = new Array(digits.length-1).fill(0);
     let intArr = BigInt(digits.join(""));
     let intStr = String(intArr + BigInt(1));
 
